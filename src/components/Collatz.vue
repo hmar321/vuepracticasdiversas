@@ -5,7 +5,7 @@
     <br />
     <button @click="generarCollatz()">Generar collatz</button>
     <ul>
-      <li v-for="num in numeros" :key="num">{{num}}</li>
+      <li v-for="num in numeros" :key="num" v-html="$filters.esPar(num)"></li>
     </ul>
   </div>
 </template>
